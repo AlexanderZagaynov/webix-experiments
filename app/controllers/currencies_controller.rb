@@ -14,8 +14,9 @@ class CurrenciesController < ApplicationController
     {
       data: @currencies.map do |currency|
         {
-          id:   currency.id,
-          name: currency.name,
+          id:    currency.id,
+          name:  currency.name,
+          value: currency.to_s,
         }
       end,
       pos: @start,
